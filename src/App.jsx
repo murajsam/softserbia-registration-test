@@ -54,6 +54,13 @@ function App() {
     }
   }
 
+  function handleFinish() {
+    if (validateStep() === true) {
+      alert("Kraj");
+      setErrorMessage("");
+    }
+  }
+
   function resetRegistration() {
     setFullName("");
     setEmail("");
@@ -160,7 +167,7 @@ function App() {
               href="#"
               onClick={(e) => {
                 e.preventDefault();
-                alert("Kraj");
+                handleFinish();
               }}
             >
               Kraj
