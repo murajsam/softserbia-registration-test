@@ -1,6 +1,5 @@
 Pokretanje projekta
 
-CLIENT
-cd client
-npm install
-npm run dev
+1. cd client
+2. npm install
+3. npm run dev
