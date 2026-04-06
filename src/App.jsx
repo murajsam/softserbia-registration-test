@@ -87,6 +87,10 @@ function App() {
 
             {currentStep === 2 && (
               <div>
+                <p>
+                  Ime i prezime: <b>{fullName}</b>
+                </p>
+
                 <label>Email: </label>
                 <input
                   type="text"
@@ -105,14 +109,13 @@ function App() {
                 <p>
                   Email: <b>{email}</b>
                 </p>
-                <div>
-                  <label>Prihvatam uslove registracije: </label>
-                  <input
-                    type="checkbox"
-                    checked={isAccepted}
-                    onChange={(e) => setIsAccepted(e.target.checked)}
-                  />
-                </div>
+
+                <label>Prihvatam uslove registracije: </label>
+                <input
+                  type="checkbox"
+                  checked={isAccepted}
+                  onChange={(e) => setIsAccepted(e.target.checked)}
+                />
               </div>
             )}
 
@@ -169,6 +172,12 @@ function App() {
       {currentStep === 4 && (
         <div>
           <h1>Registracija - uspešna</h1>
+          <p>
+            Ime i prezime: <b>{fullName}</b>
+          </p>
+          <p>
+            Email: <b>{email}</b>
+          </p>
           <p>Hvala!</p>
           <button type="button" onClick={resetRegistration}>
             Nova registracija
